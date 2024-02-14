@@ -1,0 +1,79 @@
+[
+    {
+        "GameName": "Flappy Bird",
+        "img": "https://cdn.vox-cdn.com/thumbor/qV6KOiJc3-1sO36Y-VsiEddNba4=/47x0:572x350/1200x800/filters:focal(47x0:572x350)/cdn.vox-cdn.com/uploads/chorus_image/image/28172849/flappy-bird-.0.jpg",
+        "options": [
+            {
+                "Plays": "500",
+                "Controls":"spacebar"
+            }
+        ],
+        "description": " In this game, players navigate a pixelated bird through a series of obstacles by tapping the screen to make it flap its wings and ascend. The goal is to keep the bird flying for as long as possible without hitting any pipes or the ground. With its simple yet challenging mechanics and retro-inspired graphics.Players control the bird's movement by tapping the screen or pressing the spacebar to make it flap its wings and ascend. "
+    },
+    {
+        "GameName": "Avoid Red",
+        "img": " https://e0.pxfuel.com/wallpapers/365/859/desktop-wallpaper-red-block-widescreen.jpg",
+        "options": [
+            {
+                "Plays": "453",
+                "Controls":"W,A,S,D,Spacebar"
+            }
+        ],
+        "description": "Avoid Red plunges players into a fast-paced 3D world where they control a block maneuvering through obstacles. Their mission: evade incoming red blocks at all costs. With intuitive controls and escalating challenges, it's a thrilling test of reflexes and strategy, promising endless excitement and adrenaline-fueled action."
+},
+
+{
+"GameName": "Memory Game",
+          "img": " https://images.koji-cdn.com/e6b81865-677b-4f87-83dd-ac0f5c8c1a7d/gokojicoversMemoryGame.jpg?share=2",
+        "options": [
+            {
+                "Plays": "420",
+                "Controls":"Mouse"
+            }
+        ],
+        "description": "React.js memory games offer mind-challenging fun! Match card pairs, enhance memory, and focus better. With sleek design and adjustable difficulty levels, these games suit all ages and skill levels. Engage in interactive entertainment that sharpens cognitive skills and brings joy to players. Whether you're a beginner or a pro, there's something for everyone to enjoy and benefit from in these React.js memory games. "
+   
+},
+
+{
+
+"GameName": "2048",
+          "img": " https://th.bing.com/th/id/OIP.BqjYx2m8F9u4_6lYyQj_2gHaHa?rs=1&pid=ImgDetMain",
+        "options": [
+            {
+                "Plays": "550",
+                "Controls":"Arrow keys"
+            }
+        ],
+        "description": "Dive into the addictive world of 2048, a puzzle game built with React.js! Merge numbered tiles, strategize moves, and aim for the elusive 2048 tile. Enjoy sleek design, intuitive controls, and customizable game modes. Challenge your mind, improve logical thinking, and have endless fun with this captivating game suitable for players of all ages and skill levels."
+
+},
+
+{
+
+
+"GameName": "Tetris",
+          "img": " https://th.bing.com/th/id/OIP.o0nQJ7-dHh-G2uQvpKom0gHaDt?rs=1&pid=ImgDetMain",
+        "options": [
+            {
+                "Plays": "600",
+                "Controls":"Arrow Keys"
+            }
+        ],
+        "description": "Experience the timeless thrill of Tetris, brought to life with React.js! Rotate and drop colorful blocks, clear lines, and aim for high scores. Enjoy smooth controls, vibrant visuals, and customizable gameplay options. Challenge your reflexes, enhance spatial awareness, and get lost in the addictive fun of Tetris. Whether you're a novice or a Tetris master, there's endless enjoyment waiting for you in this classic game. "
+
+},
+
+{
+
+"GameName": "Candy Crush",
+          "img": " https://www.pockettactics.com/wp-content/uploads/2020/10/candy-crush-hero.jpg",
+        "options": [
+            {
+                "Plays": "453",
+                "Controls":"Mouse"
+            }
+        ],
+        "description": "Dive into the sweet world of Candy Crush, powered by React.js! Match colorful candies, solve puzzles, and progress through delicious levels. Enjoy stunning graphics, smooth animations, and engaging challenges. Test your puzzle-solving skills, satisfy your sweet tooth, and experience endless entertainment with Candy Crush. Whether you're a casual player or a candy-matching pro, there's something delightful for everyone in this addictive game. "
+}
+]

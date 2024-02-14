@@ -11,13 +11,13 @@ export default function Dashboard() {
         Choose from your Favourites
       </h1>
       <div className='row1'>
-        <NavLink to="https://thegayatrigosavi.github.io/Flappy_Bird/" className="card mt-5" style={{ "width": "18rem", "maxHeight": "500px" }}>
+        <NavLink to="/" className="card mt-5" style={{ "width": "18rem", "maxHeight": "500px" }}>
           <img className="card-image" src="https://cdn.vox-cdn.com/thumbor/qV6KOiJc3-1sO36Y-VsiEddNba4=/47x0:572x350/1200x800/filters:focal(47x0:572x350)/cdn.vox-cdn.com/uploads/chorus_image/image/28172849/flappy-bird-.0.jpg" alt="Flappy Bird" />
           <div className="card-body">
             <h5 className="card-title">Flappy Bird</h5>
           </div>
         </NavLink>
-        <NavLink to="https://tiyabhattacharya.github.io/3Js-Game1/" className="card mt-5" style={{ "width": "18rem", "maxHeight": "500px" }}>
+        <NavLink to="/" className="card mt-5" style={{ "width": "18rem", "maxHeight": "500px" }}>
           <img className="card-image" src="https://e0.pxfuel.com/wallpapers/365/859/desktop-wallpaper-red-block-widescreen.jpg" alt="Avoid Red" />
           <div className="card-body">
             <h5 className="card-title">Avoid Red</h5>
