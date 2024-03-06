@@ -1,0 +1,25 @@
+.app {
+  display: flex;
+  padding: 30px;
+}
+
+body{
+  background-image: url('../../assets/images/image.png');
+background-size: cover;
+margin:0;
+}
+.game {
+  width: 600px;
+  height: 560px;
+  display: flex;
+  flex-wrap: wrap;
+  border:1px solid ;
+ margin-left: 50vh;
+
+  
+}
+
+.game img {
+  width: 70px;
+  height: 70px;
+}

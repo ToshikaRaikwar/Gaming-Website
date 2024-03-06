@@ -50,6 +50,10 @@ body:has(.card[data-color="green"]:hover) {
     @apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
   }
 
+  .btn2 {
+    @apply text-white bg-gradient-to-r from-[#910159] to-[#f5357f] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
+  }
+
   .header {
     @apply flex justify-between items-center sm:px-16 px-8 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
   }
@@ -72,12 +76,17 @@ body:has(.card[data-color="green"]:hover) {
   }
 }
 
+
 .glassmorphism {
   background: rgba(8, 116, 239, 0.07);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.rows{
+  margin-left: 35vh;
 }
 
 .logo {
@@ -176,13 +185,20 @@ body:has(.card[data-color="green"]:hover) {
 
 /* In your CSS file (e.g., styles.css) */
 .login-container {
-  font-family: 'YourFont', sans-serif;
-  /* Add any other styling you want */
+  font-family: 'Work Sans', sans-serif;
+  
+}
+.signup-container {
+  font-family: 'Work Sans', sans-serif;
+justify-content: right;
+
+
+  
+
 }
 
 .login-text {
-  font-size: 34px; /* Adjust the font size as needed */
-  /* Add any other styling you want for the login text */
+  font-size: 34px; 
 }
 
 .flex-column {
@@ -211,9 +227,18 @@ body:has(.card[data-color="green"]:hover) {
   width: 50%;
 }
 
+.background2{
+  @apply text-white bg-gradient-to-r from-[#910159] to-[#f5357f] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
+  height: 100vh;
+  width: 50%;
+}
+
 .combine{
 align-self:center;
 }
+.combine2{
+  align-self:center;
+  }
 
 .button{
   @apply text-white  sm:w-auto px-5 py-2.5 text-center;
