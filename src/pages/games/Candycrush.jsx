@@ -1,17 +1,18 @@
-import {useEffect, useState} from 'react'
-import ScoreBoard from "../../components/ScoreBoard"
+import { useEffect, useState } from 'react';
+import ScoreBoard from "../../components/ScoreBoard";
+import axios from 'axios';
 import bluecandy from "../../assets/images/bluecandy.png";
 import greencandy from "../../assets/images/greencandy.png";
 import orangecandy from "../../assets/images/orangecandy.png";
 import purplecandy from "../../assets/images/purplecandy.png";
 import yellowcandy from "../../assets/images/yellowcandy.png";
 import redcandy from "../../assets/images/redcandy.png";
-import blank from '../../assets/images/blank.png'
+import blank from '../../assets/images/blank.png';
 import styled from "styled-components";
-import './Candycrush.css'
-import { NavLink } from 'react-router-dom'
+import './Candycrush.css';
+import { NavLink } from 'react-router-dom';
 
-const width = 8
+const width = 8;
 const candyColors = [
     bluecandy,
     orangecandy,
@@ -19,14 +20,51 @@ const candyColors = [
     redcandy,
     yellowcandy,
     greencandy
-]
+];
 
 const Candycrush = () => {
-    const [currentColorArrangement, setCurrentColorArrangement] = useState([])
-    const [squareBeingDragged, setSquareBeingDragged] = useState(null)
-    const [squareBeingReplaced, setSquareBeingReplaced] = useState(null)
-    const [scoreDisplay, setScoreDisplay] = useState(0)
+    const [currentColorArrangement, setCurrentColorArrangement] = useState([]);
+    const [squareBeingDragged, setSquareBeingDragged] = useState(null);
+    const [squareBeingReplaced, setSquareBeingReplaced] = useState(null);
+    const [scoreDisplay, setScoreDisplay] = useState(0);
+    const [username, setUsername] = useState("");
+    const [gameOver, setGameOver] = useState(false); // State to track game over
+    const [gameDuration, setGameDuration] = useState(0); // State to track game duration
 
+    useEffect(() => {
+        const storedUsername = localStorage.getItem('username');
+        if (storedUsername) {
+            setUsername(storedUsername);
+        }
+    }, []);
+
+
+    const saveScore = async (score) => {
+        try {
+          const userName = localStorage.getItem('userName');
+          if (!userName) {
+            console.error('User name not found in local storage');
+            return;
+          }
+      
+          // Make a POST request to the backend endpoint
+          const response = await axios.post("http://localhost:3000/candysavescore", {
+            userName,
+            score
+          });
+      
+          console.log(response.data); // Log the response data
+        } catch (error) {
+          console.error("Error submitting score:", error);
+        }
+      };
+    
+
+    useEffect(() => {
+        if (gameOver) {
+            saveScore(scoreDisplay); // Send score to backend when game over
+        }
+    }, [gameOver]);
     const checkForColumnOfFour = () => {
         for (let i = 0; i <= 39; i++) {
             const columnOfFour = [i, i + width, i + width * 2, i + width * 3]
@@ -161,16 +199,26 @@ const Candycrush = () => {
 
     useEffect(() => {
         const timer = setInterval(() => {
-            checkForColumnOfFour()
-            checkForRowOfFour()
-            checkForColumnOfThree()
-            checkForRowOfThree()
-            moveIntoSquareBelow()
-            setCurrentColorArrangement([...currentColorArrangement])
-        }, 100)
-        return () => clearInterval(timer)
-    }, [checkForColumnOfFour, checkForRowOfFour, checkForColumnOfThree, checkForRowOfThree, moveIntoSquareBelow, currentColorArrangement])
+            if (gameOver) {
+                clearInterval(timer);
+                return;
+            }
+            setGameDuration((prevDuration) => prevDuration + 1); // Increment game duration
+            checkForColumnOfFour();
+            checkForRowOfFour();
+            checkForColumnOfThree();
+            checkForRowOfThree();
+            moveIntoSquareBelow();
+            setCurrentColorArrangement([...currentColorArrangement]);
+        }, 1000); // Update every second
+        return () => clearInterval(timer);
+    }, [currentColorArrangement, gameOver]);
 
+    useEffect(() => {
+        if (gameDuration >= 180) {
+            setGameOver(true);
+        }
+    }, [gameDuration]);
 
     return (<>
         <h1 className='float sm:text-xl sm:leading-snug text-center neo-brutalism-black py-0 px-8 text-white mx-4'>

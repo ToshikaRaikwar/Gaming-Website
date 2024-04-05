@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
-
+import Leaderboard from './pages/leaderboard/Leaderboard'
 import Flappybird from './pages/games/Flappybird'
 import Candycrush from './pages/games/Candycrush';
 import Memory from './pages/games/Memorygame/Memory';
@@ -16,6 +16,8 @@ import DescriptionFlappy from './pages/DescriptionFlappy';
 import DescriptionTetris from './pages/DescriptionTetris';
 import DescriptionTic from './pages/DescriptionTic';
 import DescriptionMemory from './pages/DescriptionMemory';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const App = () => {
   return (
     <>
@@ -38,6 +40,7 @@ const App = () => {
            <Route path="/DescriptionFlappy" element={<DescriptionFlappy/>}/> 
            <Route path="/DescriptionMemory" element={<DescriptionMemory/>}/> 
            <Route path="/DescriptionTic" element={<DescriptionTic/>}/> 
+           <Route path="/Leaderboard" element={<Leaderboard/>}/> 
         </Routes>
     </Router>
    </main>

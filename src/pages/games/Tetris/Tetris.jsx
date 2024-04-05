@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { createStage, checkCollision } from './gameHelpers';
 import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris';
+import axios from 'axios';
 
 // Custom Hooks
 import { useInterval } from './hooks/useInterval';
@@ -99,6 +100,32 @@ const Tetris = () => {
       }
     }
   };
+
+  const submitScore = async () => {
+    try {
+      const userName = localStorage.getItem('userName');
+      if (!userName) {
+        console.error('User name not found in local storage');
+        return;
+      }
+  
+      // Make a POST request to the backend endpoint
+      const response = await axios.post("http://localhost:3000/tetrissavescore", {
+        userName,
+        score
+      });
+  
+      console.log(response.data); // Log the response data
+    } catch (error) {
+      console.error("Error submitting score:", error);
+    }
+  };
+
+  useEffect(() => {
+    if (gameOver) {
+      submitScore();
+    }
+  }, [gameOver]);
 
   return (<>
   

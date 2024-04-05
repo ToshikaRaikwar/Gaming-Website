@@ -1,6 +1,9 @@
 
 import styled from "styled-components"; 
 import { NavLink } from "react-router-dom";
+
+import axios from 'axios';
+
 import { useEffect, useState } from "react";
 import './Flappy.css';
 const BIRD_HEIGHT = 28;
@@ -50,7 +53,7 @@ function App() {
       birdpos <= WALL_HEIGHT &&
       birdpos >=
         WALL_HEIGHT - (WALL_HEIGHT - OBJ_GAP - objHeight) - BIRD_HEIGHT;
-
+  
     if (
       objPos >= OBJ_WIDTH &&
       objPos <= OBJ_WIDTH + 80 &&
@@ -58,20 +61,48 @@ function App() {
     ) {
       setIsStart(false);
       setBirspos(300);
-      setScore(0);
+      // Use the previous score state to ensure correctness
+      setScore(prevScore => {
+        submitScore(prevScore, "PlayerName"); // Pass the previous score
+        return 0; // Reset score to 0
+      });
     }
   }, [isStart, birdpos, objHeight, objPos]);
+  
+  
   const handler = () => {
     if (!isStart) setIsStart(true);
     else if (birdpos < BIRD_HEIGHT) setBirspos(0);
     else setBirspos((birdpos) => birdpos - 50);
   };
+  const submitScore = async (score) => {
+    try {
+      const userName = localStorage.getItem('userName');
+      if (!userName) {
+        console.error('User name not found in local storage');
+        return;
+      }
+  
+      // Make a POST request to the backend endpoint
+      const response = await axios.post("http://localhost:3000/savescore", {
+        userName,
+        score
+      });
+  
+      console.log(response.data); // Log the response data
+    } catch (error) {
+      console.error("Error submitting score:", error);
+    }
+  };
+  
+  
+  
   return (<>
     <h1 className='float sm:text-xl sm:leading-snug text-center neo-brutalism-black py-0 px-8 text-white mx-4'>
         <NavLink to ="/Home" className="w-10 h-10 rounded-lg bg-black items-center justify-center flex font-bold shadow-md">
           <p className="white-gradient_text"><br />GW</p>
         </NavLink>
-      Memory Game
+      FLAPPY BIRD
       </h1>
     <Home onClick={handler}>
       <span>Score: {score}</span>

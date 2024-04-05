@@ -11,14 +11,14 @@ export default function Dashboard() {
         Choose from your Favourites
       </h1><div className='rows'>
       <div className='row1'>
-        <NavLink to="/DescriptionFlappy" className="card mt-5" style={{ "width": "18rem", "maxHeight": "500px" }}>
-          <img className="card-image" src="https://cdn.vox-cdn.com/thumbor/qV6KOiJc3-1sO36Y-VsiEddNba4=/47x0:572x350/1200x800/filters:focal(47x0:572x350)/cdn.vox-cdn.com/uploads/chorus_image/image/28172849/flappy-bird-.0.jpg" alt="Flappy Bird" />
+        <NavLink to="/DescriptionFlappy" className="card mt-5" style={{ "width": "18rem", "maxHeight": "300px" }}>
+          <img className="card-image" src="https://cdn.vox-cdn.com/thumbor/qV6KOiJc3-1sO36Y-VsiEddNba4=/47x0:572x350/1200x800/filters:focal(47x0:572x350)/cdn.vox-cdn.com/uploads/chorus_image/image/28172849/flappy-bird-.0.jpg" alt="Flappy Bird" style={{  "height": "160px" }} />
           <div className="card-body">
             <h5 className="card-title">Flappy Bird</h5>
           </div>
         </NavLink>
-        <NavLink to="/DescriptionCandy" className="card mt-5" style={{ "width": "18rem", "maxHeight": "500px" }}>
-          <img className="card-image" src="https://articles-images.sftcdn.net/wp-content/uploads/sites/8/2014/11/Candy-Crush-Saga.jpg" alt="Avoid Red" />
+        <NavLink to="/DescriptionCandy" className="card mt-5" style={{ "width": "18rem", "maxHeight": "300px" }}>
+          <img className="card-image" src="https://articles-images.sftcdn.net/wp-content/uploads/sites/8/2014/11/Candy-Crush-Saga.jpg" alt="Avoid Red"  />
           <div className="card-body">
             <h5 className="card-title">Candy Crush</h5>
           </div>
@@ -31,14 +31,14 @@ export default function Dashboard() {
         </NavLink>
         </div>
         <div className='row1'>
-        <NavLink to="/DescriptionMemory" className="card mt-5" style={{ "width": "18rem", "maxHeight": "500px" }}>
-          <img className="card-image" src="https://www.cbc.ca/kids/images/sweetymemory_thumb.jpg" alt="Avoid Red" />
+        <NavLink to="/DescriptionMemory" className="card mt-5" style={{ "width": "18rem", "maxHeight": "300px" }}>
+          <img className="card-image" src="https://www.cbc.ca/kids/images/sweetymemory_thumb.jpg" alt="Avoid Red" style={{  "height": "900px" }} />
           <div className="card-body">
             <h5 className="card-title">Memory Game</h5>
           </div>
         </NavLink>
-        <NavLink to="/DescriptionTetris" className="card mt-5" style={{ "width": "18rem", "maxHeight": "500px" }}>
-          <img className="card-image" src="https://m.media-amazon.com/images/I/71hV2ffEnEL.png" alt="Avoid Red" />
+        <NavLink to="/DescriptionTetris" className="card mt-5" style={{ "width": "18rem", "maxHeight": "300px" }}>
+          <img className="card-image" src="https://assetsio.gnwcdn.com/eas-tetris-games-are-vanishing-from-mobiles-1579798533114.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" alt="Avoid Red" style={{  "height": "100%" }} />
           <div className="card-body">
             <h5 className="card-title">Tetris</h5>
           </div>

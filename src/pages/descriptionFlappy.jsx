@@ -8,7 +8,10 @@ function DescriptionCandy() {
   const handlePlayButtonClick = () => {
     // Handle play button click event
     navigate('/Flappybird');
-    // You can navigate to the game page or start the game logic here
+  };
+  const handleLeaderButtonClick = () => {
+  
+    navigate('/Leaderboard?tab=candy');
   };
 
   return (
@@ -28,7 +31,7 @@ function DescriptionCandy() {
           <h2>Flappy Bird</h2>
           <p>Flappy Bird, a mobile sensation, entranced players globally with its addictive gameplay. Players guide a bird by tapping the screen, propelling it upward to navigate through tight spaces between scrolling green pipes. Precision is vital; mistimed taps lead to crashes and game over. Its minimalist design and intuitive mechanics garnered widespread appeal, drawing players of all ages to chase high scores by mastering its challenging controls and unforgiving obstacles</p>
           <button onClick={handlePlayButtonClick}>Play Now</button>
-          <button onClick={handlePlayButtonClick}>Dashboard</button>
+          <button onClick={handleLeaderButtonClick}>Dashboard</button>
         </div>
       </div>
     </div>
