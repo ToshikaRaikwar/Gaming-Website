@@ -11,6 +11,11 @@ function DescriptionCandy() {
     // You can navigate to the game page or start the game logic here
   };
 
+  const handleLeaderButtonClick = () => {
+  
+    navigate('/Leaderboard');
+  };
+  
   return (
     <div>
        <h1 className='float sm:text-xl sm:leading-snug text-center neo-brutalism-black py-0 px-8 text-white mx-4'>
@@ -28,7 +33,7 @@ function DescriptionCandy() {
           <h2>Candy Crush</h2>
           <p>Candy Crush is a highly addictive puzzle game where players match colorful candies to progress through hundreds of levels. By swapping adjacent candies to create rows or columns of three or more matching candies, players can clear obstacles, meet level objectives, and earn points.It is known for its vibrant graphics, engaging gameplay mechanics, and challenging levels.</p>
           <button onClick={handlePlayButtonClick}>Play Now</button>
-          <button onClick={handlePlayButtonClick}>Dashboard</button>
+          <button onClick={handleLeaderButtonClick}>Dashboard</button>
         </div>
       </div>
     </div>

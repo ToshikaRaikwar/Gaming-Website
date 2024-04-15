@@ -57,12 +57,10 @@ function Leaderboard() {
         </NavLink>
     LeaderBoard
       </h1><br></br>
-    <Tabs style={{ backgroundColor: '#000000', border: '2px solid #000000', borderRadius: '5px' , color:"ffffff"}}
-  
-      //id="controlled-tab-example"
+    <Tabs style={{ backgroundColor: '#000000', border: '2px solid #000000', borderRadius: '5px' , width:"1320px", marginLeft:"25px"}}
       activeKey={key}
       onSelect={(k) => setKey(k)}
-     // className="mb-3"
+     
     >
       <Tab eventKey="flappy" title="FlappyBird">
       <div style={{ border: '3px solid #000000', padding: '10px', borderRadius: '5px' }}>
@@ -106,9 +104,7 @@ function Leaderboard() {
   </table>
 </div>
       </Tab>
-      <Tab eventKey="memory" title="Memory Game">
-        Tab content for Memory Game
-      </Tab>
+      
       <Tab eventKey="tetris" title="Tetris">
       <div style={{ border: '3px solid #000000', padding: '10px', borderRadius: '5px' }}>
   <table style={{ borderCollapse: 'collapse', width: '100%' }}>

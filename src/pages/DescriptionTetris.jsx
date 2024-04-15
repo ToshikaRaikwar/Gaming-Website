@@ -11,6 +11,11 @@ function DescriptionCandy() {
     // You can navigate to the game page or start the game logic here
   };
 
+  const handleLeaderButtonClick = () => {
+  
+    navigate('/Leaderboard');
+  };
+
   return (
     <div>
        <h1 className='float sm:text-xl sm:leading-snug text-center neo-brutalism-black py-0 px-8 text-white mx-4'>
@@ -28,7 +33,7 @@ function DescriptionCandy() {
           <h2>Tetris</h2>
           <p>Tetris is a classic puzzle game where players strategically arrange falling blocks, to create complete horizontal lines. As the blocks descend faster and the playfield fills up, players must think quickly and make efficient placements to keep the game going. With its simple yet addictive gameplay and timeless appeal, "Tetris" has remained a beloved classic since its creation in 1984 by Alexey Pajitnov.</p>
           <button onClick={handlePlayButtonClick}>Play Now</button>
-          <button onClick={handlePlayButtonClick}>Dashboard</button>
+          <button onClick={handleLeaderButtonClick}>Dashboard</button>
         </div>
       </div>
     </div>

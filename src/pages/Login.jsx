@@ -1,19 +1,24 @@
 import React, { useState } from 'react';
 import google from '../assets/images/google.png';
 import facebook from '../assets/images/facebook.png';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
  
-
+  const navigate = useNavigate();
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
+  };
+
+  const navreg = () => {
+    navigate('/Register');
   };
 
   const handleLogin = async (req, res) => {
@@ -34,6 +39,7 @@ export default function Login() {
       } else {
         // Authentication failed, display error message
         console.error('Authentication failed');
+        alert("Incorrect Credentials!");
       }
     } catch (error) {
       console.error('Error during login:', error);
@@ -48,7 +54,7 @@ export default function Login() {
             <h1 style={{ margin: "180px", fontSize: "2rem" }}> Hello,Friend</h1>
             <br />
             <p style={{ margin: "-170px", fontSize: "1rem" }}>Enter Your details and start your journey</p><br />
-            <button className='button' style={{ margin: "190px" }}>Register</button>
+            <button className='button'  onClick={navreg} style={{ margin: "190px" }}>Register</button>
           </div>
           <div className='login-container absolute top-28 left-0px right-80 z-10 flex flex-column items-right justify-end'>
             <p className='text login-text'>Login</p>

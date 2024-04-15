@@ -2,6 +2,7 @@ import React from 'react'
 import {Route,BrowserRouter as Router,Routes} from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
+import Homelogout from './pages/Homelogout'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
@@ -12,7 +13,7 @@ import Memory from './pages/games/Memorygame/Memory';
 import TicTacToe from './pages/games/xo/TicTacToe';
 import Tetris from './pages/games/Tetris/Tetris';
 import DescriptionCandy from './pages/DescriptionCandy';
-import DescriptionFlappy from './pages/DescriptionFlappy';
+import DescriptionFlappy from './pages/descriptionFlappy';
 import DescriptionTetris from './pages/DescriptionTetris';
 import DescriptionTic from './pages/DescriptionTic';
 import DescriptionMemory from './pages/DescriptionMemory';
@@ -26,6 +27,7 @@ const App = () => {
         <Routes>
            <Route path="/" element={<Home/>}/>
            <Route path="/Home" element={<Home/>}/>
+           <Route path="/Homelogout" element={<Homelogout/>}/>
            <Route path="/Dashboard" element={<Dashboard />} />
             <Route path="/Login" element={<Login/>}/>
             <Route path="/Register" element={<Register/>}/>

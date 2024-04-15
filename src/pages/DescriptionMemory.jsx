@@ -11,6 +11,11 @@ function DescriptionCandy() {
 
   };
 
+  const handleLeaderButtonClick = () => {
+  
+    navigate('/Leaderboard?tab=candy');
+  };
+
   return (
     <div>
        <h1 className='float sm:text-xl sm:leading-snug text-center neo-brutalism-black py-0 px-8 text-white mx-4'>
@@ -27,7 +32,7 @@ function DescriptionCandy() {
           <h2>Memory Game</h2>
           <p>A memory game is a mental exercise where players are presented with a set of cards face down. They take turns flipping pairs of cards to find matching pairs. The game requires concentration and remembering the location of previously revealed cards to make successful matches.</p>
           <button onClick={handlePlayButtonClick}>Play Now</button>
-          <button onClick={handlePlayButtonClick}>Dashboard</button>
+          <button onClick={handleLeaderButtonClick}>Dashboard</button>
         </div>
       </div>
     </div>

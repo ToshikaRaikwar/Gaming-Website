@@ -97,6 +97,8 @@ app.post("/signup", async (req, res) => {
     await newUser.save();
     console.log("User registered successfully");
     res.status(200).send("User registered successfully");
+    
+    
   } catch (err) {
     console.error("Error saving user to database:", err);
     res.status(500).send("Error saving user to database.");
