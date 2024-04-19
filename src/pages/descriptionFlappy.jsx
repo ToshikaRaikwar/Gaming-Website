@@ -10,14 +10,13 @@ function DescriptionCandy() {
     navigate('/Flappybird');
   };
   const handleLeaderButtonClick = () => {
-  
-    navigate('/Leaderboard?tab=candy');
+    navigate('/Leaderboard');
   };
 
   return (
     <div>
        <h1 className='float sm:text-xl sm:leading-snug text-center neo-brutalism-black py-0 px-8 text-white mx-4'>
-        <NavLink to ="/Home" className="w-10 h-10 rounded-lg bg-black items-center justify-center flex font-bold shadow-md">
+        <NavLink to ="/Homelogout" className="w-10 h-10 rounded-lg bg-black items-center justify-center flex font-bold shadow-md">
           <p className="white-gradient_text"><br />GW</p>
         </NavLink>
     Flappy bird
